@@ -1,7 +1,7 @@
 import { Avatar, Button, Dropdown, Navbar, TextInput } from 'flowbite-react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { FaMoon } from 'react-icons/fa';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { toggleTheme } from '../redux/theme/themeSlice';
@@ -60,7 +60,7 @@ export default function Header() {
                     className='w-12 h-10 hidden sm:inline'
                     color='gray' onClick={() => dispatch(toggleTheme())}
                 >
-                    <FaMoon />
+                    {theme === 'light' ? <FaMoon /> : <FaSun />}
                 </Button>
                 {
                     currentUser ? (
