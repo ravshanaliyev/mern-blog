@@ -14,11 +14,13 @@ import UpdatePost from "./pages/UpdatePost"
 import PostPage from "./pages/PostPage"
 import ScrollToTop from "./components/ScrollToTop"
 import Search from "./pages/Search"
+import ReadingBar from "./components/ReadingProccess"
 
 function App() {
   return (
     <>
       <ScrollToTop />
+      <ReadingBar />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
